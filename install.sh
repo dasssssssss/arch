@@ -18,13 +18,14 @@ mkfs.ext4 /dev/sd${partition}1
 mount /dev/sd${partition}1 /mnt
 
 #install the base packages and custom packages
-pacstrap /mnt base base-devel dhclient dialog dnsutils nmap openvpn sudo wget nano
+pacstrap /mnt base linux linux-firmware dhclient dialog dnsutils nmap openvpn sudo wget nano 
 
 #generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #change root
 arch-chroot /mnt
+
 
 
 
