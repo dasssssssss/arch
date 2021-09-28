@@ -29,7 +29,6 @@ read partition
 grub-install --target=i386-pc /dev/sd$partition
 grub-mkconfig -o /boot/grub/grub.cfg
 
-#finish up
-exit
-umount -R /mnt
-reboot
+#exit
+#umount -R /mnt
+#reboot
