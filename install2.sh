@@ -1,3 +1,5 @@
+pacman -Sy
+
 #set the time zone
 ln -sf /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
 hwclock --systohc
@@ -27,6 +29,16 @@ echo "Enter a partition to install GRUB on: /dev/sd"
 read partition
 grub-install --target=i386-pc /dev/sd$partition
 grub-mkconfig -o /boot/grub/grub.cfg
+
+#regular user
+echo "NEW USER"
+echo "Username: "
+read username
+useradd -m $username
+passwd $username
+usermod --append --groups wheel $username
+echo "Uncomment %wheel ALL=(ALL) ALL"
+visudo
 
 #finish up
 #exit
