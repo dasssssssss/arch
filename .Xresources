@@ -1,0 +1,66 @@
+! special
+*.foreground:   #ffffff
+*.background:   #170f0d
+*.cursorColor:  #746c48
+
+! black
+*.color0:       #392925
+*.color8:       #544b2e
+
+! red
+*.color1:       #98724c
+*.color9:       #af652f
+
+! green
+*.color2:       #908f32
+*.color10:      #c3c13d
+
+! yellow
+*.color3:       #aa964c
+*.color11:      #c8b55b
+
+! blue
+*.color4:       #7b854e
+*.color12:      #70a16c
+
+! magenta
+*.color5:       #6b5644
+*.color13:      #98724c
+
+! cyan
+*.color6:       #5c5142
+*.color14:      #778725
+
+! white
+*.color7:       #c8b55b
+*.color15:      #e4dc8c
+
+
+URxvt.transparent: true
+URxvt.shading:20
+
+!! URxvt Appearance
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:b3778725, #aa964c, #392925
+rofi.color-normal: #af652f, #ffffff, argb:7faf652f, argb:82af652f, #ffffff
+rofi.color-active: #af652f, #ffffff, argb:85af652f, argb:8baf652f, #ffffff
+rofi.color-urgent: #af652f, #ffffff, argb:76af652f, argb:76af652f, #ffffff
+rofi.hide-scrollbar: true
+rofi.font: System San Francisco Display 10
