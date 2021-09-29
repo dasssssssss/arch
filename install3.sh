@@ -1,3 +1,3 @@
 sudo dhclient
-sudo pacman -S nmap openvpn i3 xorg-server xorg-apps xorg-xinit compton thunar alsa-utils pavucontrol vlc firefox rxvt-unicode
+sudo pacman -S nmap openvpn i3 xorg-server xorg-apps xorg-xinit compton thunar alsa-utils pavucontrol vlc firefox rxvt-unicode dmenu --noconfirm
 startx
