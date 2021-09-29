@@ -52,6 +52,7 @@ cp i3config /home/$username/.config/i3/
 mv /home/$username/.config/i3/i3config /home/$username/.config/i3/config
 mkdir /home/$username/protonvpn
 cp nl.protonvpn.com.udp.ovpn /home/$username/protonvpn/
+cp install3.sh /home/sam/
 
 cd /
 rm -R arch
