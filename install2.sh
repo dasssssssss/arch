@@ -40,7 +40,20 @@ usermod --append --groups wheel $username
 echo "Uncomment %wheel ALL=(ALL) ALL"
 visudo
 
-#finish up
-#exit
-#umount -R /mnt
-#reboot
+#copy files
+cp .fehbg /home/$username/
+cp .xinitrc /home/$username/
+cp .Xresources /home/$username/
+cp display.sh /home/$username/
+cp vpn.sh /home/$username/
+mkdir /home/$username/.config
+mkdir /home/$username/.config/i3
+cp i3config /home/$username/.config/i3/
+mv ~/.config/i3/i3config ~/.config/i3/config
+mkdir ~/protonvpn
+cp nl.protonvpn.com.udp.ovpn ~/protonvpn/
+
+echo "exit"
+echo "umount -R /mnt"
+echo "reboot"
+
