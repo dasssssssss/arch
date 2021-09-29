@@ -49,11 +49,12 @@ cp vpn.sh /home/$username/
 mkdir /home/$username/.config
 mkdir /home/$username/.config/i3
 cp i3config /home/$username/.config/i3/
-mv ~/.config/i3/i3config ~/.config/i3/config
-mkdir ~/protonvpn
-cp nl.protonvpn.com.udp.ovpn ~/protonvpn/
+mv /home/$username/.config/i3/i3config /home/$username/.config/i3/config
+mkdir /home/$username/protonvpn
+cp nl.protonvpn.com.udp.ovpn /home/$username/protonvpn/
 
-rm -R /mnt/arch
+cd /
+rm -R arch
 
 echo "exit"
 echo "umount -R /mnt"
