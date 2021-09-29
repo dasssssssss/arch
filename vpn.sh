@@ -1,3 +1,3 @@
 sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-sudo openvpn /home/sam/protonvpn/nl.protonvpn.com.udp.ovpn
+sudo openvpn ~/protonvpn/nl.protonvpn.com.udp.ovpn
