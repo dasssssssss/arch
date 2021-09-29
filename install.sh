@@ -24,7 +24,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 pacstrap /mnt base linux linux-firmware dhclient dialog dnsutils nmap openvpn sudo wget nano vim
 
 chmod 777 ~/arch/*.sh
-cp -R ~/arch /mnt/
+cp ~/arch/* /mnt/
 
 #change root
 arch-chroot /mnt
