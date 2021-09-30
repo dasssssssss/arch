@@ -21,7 +21,7 @@ mount /dev/sd${partition}1 /mnt
 genfstab -U /mnt >> /mnt/etc/fstab
 
 #install the base packages and custom packages
-pacstrap /mnt base linux linux-firmware dhclient dialog dnsutils nmap openvpn sudo wget nano vim
+pacstrap /mnt base linux linux-firmware dhclient dialog dnsutils nmap sudo wget nano vim
 
 chmod 777 ~/arch/*.sh
 cp -R ~/arch /mnt/
