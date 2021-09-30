@@ -10,13 +10,14 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 #network configuration
-echo "Enter a hostname: "
-read varhostname
-echo $varhostname > /etc/hostname
+#echo "Enter a hostname: "
+#read varhostname
+#echo $varhostname > /etc/hostname
+echo desktop > /etc/hostname
 
 echo "127.0.0.1	localhost" > /etc/hosts
 echo "::1	localhost" >> /etc/hosts
-echo "127.0.1.1	${varhostname}.localdomain $varhostname" >> /etc/hosts
+echo "127.0.1.1	desktop.localdomain desktop " >> /etc/hosts
 
 #root password
 echo "Enter the root password:"
@@ -31,27 +32,28 @@ grub-install --target=i386-pc /dev/sd$partition
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #regular user
-echo "NEW USER"
-echo "Username: "
-read username
-useradd -m $username
-passwd $username
-usermod --append --groups wheel $username
+#echo "NEW USER"
+#echo "Username: "
+#read username
+#useradd -m $username
+useradd -m sam
+passwd sam
+usermod --append --groups wheel sam
 echo "Uncomment %wheel ALL=(ALL) ALL"
 visudo
 
 #copy files
-cp .fehbg /home/$username/
-cp .xinitrc /home/$username/
-cp .Xresources /home/$username/
-cp display.sh /home/$username/
-cp vpn.sh /home/$username/
-mkdir /home/$username/.config
-mkdir /home/$username/.config/i3
-cp i3config /home/$username/.config/i3/
-mv /home/$username/.config/i3/i3config /home/$username/.config/i3/config
-mkdir /home/$username/protonvpn
-cp nl.protonvpn.com.udp.ovpn /home/$username/protonvpn/
+cp .fehbg /home/sam/
+cp .xinitrc /home/sam/
+cp .Xresources /home/sam/
+cp display.sh /home/sam/
+cp vpn.sh /home/sam/
+mkdir /home/sam/.config
+mkdir /home/sam/.config/i3
+cp i3config /home/sam/.config/i3/
+mv /home/sam/.config/i3/i3config /home/sam/.config/i3/config
+mkdir /home/sam/protonvpn
+cp nl.protonvpn.com.udp.ovpn /home/sam/protonvpn/
 cp install3.sh /home/sam/
 
 cd /
